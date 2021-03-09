@@ -1,4 +1,4 @@
-package com.example.demo
+package com.example.demoapp
 
 import android.content.DialogInterface
 import android.os.Bundle
