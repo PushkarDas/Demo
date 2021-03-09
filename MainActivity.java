@@ -92,23 +92,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     count++;
                 }
             }
-            Log.e("condition", count+"::"+n);
+           
             if(count>n)
             {
-                Log.e("substring", substring);
                 Pattern pattern = Pattern.compile("\\s");
                 String[] temp = pattern.split(substring);
 
                 for (int m = temp.length - (n+1); m >=0; m--) {
-                    Log.e("temp[m] 1st", temp[m]);
                     finalres = finalres.concat(temp[m]+" ");
-                    Log.e("finalres 1st", finalres);
                 }
                 for (int x = count-n; x <count; x++) {
-                    Log.e("temp[x] 2d", temp[x]);
                     finalres = finalres.concat(temp[x]+" ");
-                    Log.e("finalres 2d", finalres);
-                }
+                    }
                 finalres = finalres.substring(0, finalres.length() - 1).concat(".");
             }
             else
@@ -116,7 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 finalres = finalres.concat(substring).concat(".");
             }
 
-            //System.out.println(finalres);
         }
         alertConfirm(finalres);
     }
